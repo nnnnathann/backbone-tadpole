@@ -1,0 +1,36 @@
+{
+  "name": "backbone-live-collection",
+  "main": "backbone-live-collection.js",
+  "version": "0.0.1",
+  "authors": [
+    "Nathan Bleigh <nathan.bleigh@gmail.com>"
+  ],
+  "description": "Live Polling Collection for Backbone",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "backbone",
+    "polling",
+    "collection",
+    "stream"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.0",
+    "requirejs": "~2.1.11",
+    "sinonjs": "~1.9.0"
+  }
+}

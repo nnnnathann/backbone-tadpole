@@ -1,0 +1,25 @@
+{
+  "name": "backbone-tadpole",
+  "version": "0.0.1",
+  "description": "Live Polling Collection for Backbone",
+  "main": "backbone-tadpole.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "backbone",
+    "polling",
+    "live",
+    "collection",
+    "stream"
+  ],
+  "author": "Nathan Bleigh",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^1.11.0",
+    "backbone": "^1.1.2"
+  }
+}

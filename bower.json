@@ -1,6 +1,6 @@
 {
-  "name": "backbone-live-collection",
-  "main": "backbone-live-collection.js",
+  "name": "backbone-tadpole",
+  "main": "backbone-tadpole.js",
   "version": "0.0.1",
   "authors": [
     "Nathan Bleigh <nathan.bleigh@gmail.com>"

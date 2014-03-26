@@ -8,8 +8,15 @@ define(function (require) {
       options = options || {};
       this.options = _.extend({ interval: 1000 }, options);
       this.options.data = options.data || {};
-      this.pollBind = _.bind(this.poll,this);
+      this.pollBind = _.bind(this.autoPoll,this);
+      this.stopped = false;
       this.poll();
+    },
+    autoPoll: function () {
+      if(this.stopped) {
+        return;
+      }
+      return this.poll();
     },
     poll: function () {
       if(this._previousFetch){
@@ -20,6 +27,7 @@ define(function (require) {
       this._timeout = setTimeout(this.pollBind, this.options.interval);
     },
     stopPolling: function () {
+      this.stopped = true;
       if(this._timeout){
         clearTimeout(this._timeout);
       }

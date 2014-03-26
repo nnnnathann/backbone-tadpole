@@ -5,20 +5,23 @@ define(function (require) {
   var Backbone = require('backbone');
   var Mixin = {
     startPolling: function (options) {
-      var since = (new Date()).getTime();
       options = options || {};
       this.options = _.extend({ interval: 1000 }, options);
-      this.options.data = _.extend({ since: since }, options.data || {});
+      this.options.data = options.data || {};
       this.pollBind = _.bind(this.poll,this);
       this.poll();
     },
     poll: function () {
+      if(this._previousFetch){
+        this.options.data.since = this._previousFetch;
+      }
       this.fetch(this.options);
-      this.timeout = setTimeout(this.pollBind, this.options.interval);
+      this._previousFetch = (new Date()).getTime();
+      this._timeout = setTimeout(this.pollBind, this.options.interval);
     },
     stopPolling: function () {
-      if(this.timeout){
-        clearTimeout(this.timeout);
+      if(this._timeout){
+        clearTimeout(this._timeout);
       }
     }
   };

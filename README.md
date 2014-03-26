@@ -35,3 +35,9 @@ var MyClass = Backbone.Collection.extend(
   })
 );
 ```
+
+### API
+
+```javascript
+
+```

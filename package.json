@@ -1,6 +1,6 @@
 {
   "name": "backbone-tadpole",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Live Polling Collection for Backbone",
   "main": "backbone-tadpole.js",
   "directories": {
